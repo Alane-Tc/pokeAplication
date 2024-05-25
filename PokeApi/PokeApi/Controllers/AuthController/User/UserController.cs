@@ -26,16 +26,16 @@ namespace PokeApi.Controllers.AuthController.User
                 {
                     // Puedes agregar roles o realizar otras acciones aquí
                     //return RedirectToAction("Index", "Home");
-                    return Ok("Creado correctamente");
-                }
+                    return Ok(new { message = "Usuario creado correctamente" });
+            }
 
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-            
+            //foreach (var error in result.Errors)
+            //{
+            //    ModelState.AddModelError(string.Empty, error.Description);
+            //}
 
-            return BadRequest(result.Errors);
+            var errors = result.Errors.Select(e => e.Description).ToList();
+            return BadRequest(new { message = "Algo salió mal", errors });
         }
 
     }
