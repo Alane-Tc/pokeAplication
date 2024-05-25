@@ -1,17 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {RegisterUser} from '../interface/RegisterUser'
+import { RegisterUser } from '../interface/RegisterUser'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceProxyService {
-  private apiurl = 'https://localhost:44320/api/User';
+  // private apiurl = 'https://localhost:44320/api/User';
 
-  constructor(private http: HttpClient) {}
+  private apiUrl(url: string) {
+    return `https://localhost:44320/api/${url}`
+  }
+
+  constructor(private http: HttpClient) { }
 
   register(model: RegisterUser): Observable<any> {
-    return this.http.post<any>(this.apiurl, model);
+    var urlApi = this.apiUrl("User")
+    return this.http.post<any>(urlApi, model);
   }
 }
