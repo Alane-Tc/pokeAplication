@@ -9,13 +9,13 @@
                 <div class="card-body">
                     <h1 class="text-center"><b>Inicio Sesion</b></h1>
                     <div class="container">
-                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
                             <div class="mt-5 mb-5">
-                                <div class="mb-5">
+                                <!-- <div class="mb-5">
                                     <label class="form-label" for="usermame">UserName</label>
                                     <input class="form-control form-control-sm" id="username" formControlName="username"
                                         type="text">
-                                </div>
+                                </div> -->
 
                                 <div class="mb-5">
                                     <label class="form-label" for="email">Email</label>

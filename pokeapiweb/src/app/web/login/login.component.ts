@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceProxyService } from '../../shared/service/service-proxy.service';
 import { RegisterUser } from 'src/app/shared/interface/RegisterUser';
-import Swal from 'sweetalert2';
 import { PokeAlertService } from 'src/app/shared/service/alert/poke-alert.service';
+import { AuthService } from 'src/app/shared/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,11 +12,13 @@ import { PokeAlertService } from 'src/app/shared/service/alert/poke-alert.servic
 })
 export class LoginComponent {
   public registerForm: FormGroup;
+  public loginForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private _seriveProxy: ServiceProxyService,
-    private _pokeAlertProxy: PokeAlertService
+    private _pokeAlertProxy: PokeAlertService,
+    private _authProxy: AuthService
   ) {
 
     this.registerForm = this.fb.group({
@@ -24,6 +26,12 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
+
+
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    })
   }
 
 
@@ -40,5 +48,17 @@ export class LoginComponent {
         this._pokeAlertProxy.alertError("Error al realizar el usuario")
       }
     );
+  }
+
+  login(): void {
+    const loginDto = this.loginForm.value;
+    this._authProxy.login(loginDto.email, loginDto.password).subscribe(response => {
+      console.log("Login exitoso");
+    },
+      error => {
+        console.error('Error en el login', error);
+      }
+    )
+    console.log("Login", loginDto);
   }
 }
