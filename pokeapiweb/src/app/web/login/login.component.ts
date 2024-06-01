@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ServiceProxyService } from '../../shared/service/service-proxy.service';
-import { RegisterUser } from 'src/app/shared/interface/RegisterUser';
 import { PokeAlertService } from 'src/app/shared/service/alert/poke-alert.service';
 import { AuthService } from 'src/app/shared/service/auth.service';
 import { Router } from '@angular/router';

@@ -166,3 +166,5 @@ C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\obj\Debug\net7.0\refint\Poke
 C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\obj\Debug\net7.0\PokeApi.pdb
 C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\obj\Debug\net7.0\PokeApi.genruntimeconfig.cache
 C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\obj\Debug\net7.0\ref\PokeApi.dll
+C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\bin\Debug\net7.0\PokeApi.xml
+C:\Users\Alan Tamez\Desktop\PokeApi\PokeApi\PokeApi\obj\Debug\net7.0\PokeApi.xml

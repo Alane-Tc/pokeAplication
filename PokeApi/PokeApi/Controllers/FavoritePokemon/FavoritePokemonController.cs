@@ -13,7 +13,7 @@ namespace PokeApi.Controllers.FavoritePokemon
             _context = context;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetFavoritePokemons")]
         public async Task<IEnumerable<PokeApi.Models.FavoritePokemon>> GetFavoritePokemons()
         {
             return await _context.FavoritePokemons.ToListAsync();

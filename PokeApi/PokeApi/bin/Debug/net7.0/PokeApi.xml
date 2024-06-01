@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PokeApi</name>
+    </assembly>
+    <members>
+        <member name="M:PokeApi.Controllers.AuthController.User.UserController.GetInformationUser(System.String)">
+            <summary>
+            GetUserInformation.
+            </summary>
+            <returns>An enumerable of weather forecasts.</returns>
+        </member>
+        <member name="M:PokeApi.Controllers.WeatherForecastController.Get">
+            <summary>
+            Gets the weather forecast.
+            </summary>
+            <returns>An enumerable of weather forecasts.</returns>
+        </member>
+        <member name="T:PokeApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PokeApi.Migrations.AddTableFavoritePokemon">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.AddTableFavoritePokemon.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.AddTableFavoritePokemon.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PokeApi.Migrations.AddTableFavoritePokemon.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

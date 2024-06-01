@@ -18,6 +18,10 @@ namespace PokeApi.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the weather forecast.
+        /// </summary>
+        /// <returns>An enumerable of weather forecasts.</returns>
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
