@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PokeApi.Dtos.AuthController.User;
 
@@ -19,6 +20,8 @@ namespace PokeApi.Controllers.AuthController.User
         /// GetUserInformation.
         /// </summary>
         /// <returns>An enumerable of weather forecasts.</returns>
+        /// 
+        [Authorize]
         [HttpGet("{email}")]
         public async Task<UserDto> GetInformationUser(string email)
         {
